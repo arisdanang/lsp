@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+      <title>TUK &mdash; Stisla</title>
+
+      <!-- General CSS Files -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+      <!-- CSS Libraries -->
+      <link rel="stylesheet" href="../node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+      <link rel="stylesheet" href="../node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css">
+      <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+      <!-- Template CSS -->
+      <link rel="stylesheet" href="../assets/css/style.css">
+      <link rel="stylesheet" href="../assets/css/components.css"> 
+   </head>
+
+   <body>
+      <div id="app">
+         <div class="main-wrapper">
+            <div class="navbar-bg"></div>
+            <nav class="navbar navbar-expand-lg main-navbar">
+            <form class="form-inline mr-auto">
+               <ul class="navbar-nav mr-3">
+                  <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+                  <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+               </ul>
+            </form>
+            <ul class="navbar-nav navbar-right">
+               <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                  <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                  <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+                  <div class="dropdown-menu dropdown-menu-right">
+                     <a href="features-profile.html" class="dropdown-item has-icon">
+                        <i class="far fa-user"></i> Profile
+                     </a>
+                     <a href="#" class="dropdown-item has-icon text-danger">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                     </a>
+                  </div>
+               </li>
+            </ul>
+            </nav>
+            <div class="main-sidebar">
+               <aside id="sidebar-wrapper">
+                  <div class="sidebar-brand">
+                     <a href="index.html">LSP System</a>
+                  </div>
+                  <div class="sidebar-brand sidebar-brand-sm">
+                     <a href="index.html">LSP</a>
+                  </div>
+                  <ul class="sidebar-menu">
+                     <li class="menu-header">Dashboard</li>
+                     <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                     </li>
+                     <li class="menu-header">Master</li>
+                     <li class="nav-item">
+                        <a href="asesor.html" class="nav-link" ><i class="fas fa-columns"></i> <span>Assessor</span></a>
+                     </li>
+                     <li class="nav-item active">
+                        <a href="tuk.html" class="nav-link" ><i class="fas fa-columns"></i><span>TUK</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="skema.html" class="nav-link" ><i class="fas fa-columns"></i> <span>Skema</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="ujian.html" class="nav-link" ><i class="fas fa-columns"></i> <span>Ujian Tertulis</span></a>
+                     </li>
+                     <li class="menu-header">Form</li>
+                     <li class="nav-item">
+                        <a href="form01.html" class="nav-link"><i class="fas fa-th-large"></i> <span>Form APL 01</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="form02.html" class="nav-link"><i class="fas fa-th-large"></i> <span>Form APL 02</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="rekap.html" class="nav-link"><i class="fas fa-th-large"></i> <span>Rekap Hasil Ujian</span></a>
+                     </li>
+                     </ul>
+               </aside>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+               <section class="section">
+                  <div class="section-header">
+                     <h1>Tempat Uji Kompetensi(TUK)</h1>
+                     <div class="section-header-breadcrumb">
+                        <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                        <div class="breadcrumb-item">TUK</div>
+                     </div>
+                  </div>
+
+                  <div class="section-body">
+                     <div class="row">
+                        <div class="col-12 col-md-4 col-lg-4">
+                           <div class="card">
+                              <div class="card-header">
+                                 <h4>New TUK</h4>
+                              </div>
+                              <div class="card-body">
+                                 <div class="form-group">
+                                    <label>Nama TUK</label>
+                                    <input type="text" class="form-control">
+                                 </div>
+                                 <div class="form-group">
+                                    <label>Kode</label>
+                                    <input type="text" class="form-control">
+                                 </div>
+                                 <div class="form-group">
+                                    <label>Jenis TUK</label>
+                                    <select class="form-control">
+                                       <option>Sewaktu</option>
+                                       <option>Tempat Kerja</option>
+                                       <option>Mandiri</option>
+                                    </select>
+                                 </div>
+                                    
+                                 <div class="form-group">
+                                    <label>Alamat</label>
+                                    <textarea class="form-control"></textarea>
+                                 </div>
+                              </div>
+                              <div class="card-footer text-right">
+                                 <button class="btn btn-primary mr-1" type="submit">Submit</button>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-8">
+                           <div class="card">
+                              <div class="card-header">
+                                 <h4>List of TUK</h4>
+                              </div>
+                              <div class="card-body">
+                                 <div class="table-responsive">
+                                    <table class="table table-striped" id="table-1">
+                                       <thead>
+                                          <tr>
+                                             <th class="text-center">
+                                                No
+                                             </th>
+                                             <th>Kode</th>
+                                             <th width="75">Jenis TUK</th>
+                                             <th>Nama TUK</th>
+                                             <th>Alamat</th>
+                                             <th>Action</th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr>
+                                             <th scope="row">1</th>
+                                             <td width="150">070-TUKS-LSPABI</td>
+                                             <td>Sewaktu</td>
+                                             <td>Fresh Konsultan</td>
+                                             <td>Jalan Parangtritis, Prancak Dukuh, Sewon, Pri Bantul, Daerah Istimewa Yogyakarta</td>
+                                             <td width="150">
+                                                <a href="detail-tuk.html"><button class="btn btn-info btn-icon" ><i class="fa fa-info-circle"></i></button></a>
+                                                <a href="edit-tuk.html"><button class="btn btn-primary btn-icon"><i class="fas fa-edit"></i></button></a>
+                                                <button class="btn btn-danger btn-icon"><i class="fas fa-times"></i></button>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th scope="row">1</th>
+                                             <td>070-TUKS-LSPABI</td>
+                                             <td>Sewaktu</td>
+                                             <td>Fresh Konsultan</td>
+                                             <td>Jalan Parangtritis, Prancak Dukuh, Sewon, Pri Bantul, Daerah Istimewa Yogyakarta</td>
+                                             <td>
+                                                <a href="detail-tuk.html"><button class="btn btn-info btn-icon" ><i class="fa fa-info-circle"></i></button></a>
+                                                <a href="edit-tuk.html"><button class="btn btn-primary btn-icon"><i class="fas fa-edit"></i></button></a>
+                                                <button class="btn btn-danger btn-icon"><i class="fas fa-times"></i></button>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th scope="row">1</th>
+                                             <td>070-TUKS-LSPABI</td>
+                                             <td>Sewaktu</td>
+                                             <td>Fresh Konsultan</td>
+                                             <td>Jalan Parangtritis, Prancak Dukuh, Sewon, Pri Bantul, Daerah Istimewa Yogyakarta</td>
+                                             <td>
+                                                <a href="detail-tuk.html"><button class="btn btn-info btn-icon" ><i class="fa fa-info-circle"></i></button></a>
+                                                <a href="edit-tuk.html"><button class="btn btn-primary btn-icon"><i class="fas fa-edit"></i></button></a>
+                                                <button class="btn btn-danger btn-icon"><i class="fas fa-times"></i></button>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th scope="row">1</th>
+                                             <td>070-TUKS-LSPABI</td>
+                                             <td>Sewaktu</td>
+                                             <td>Fresh Konsultan</td>
+                                             <td>Jalan Parangtritis, Prancak Dukuh, Sewon, Pri Bantul, Daerah Istimewa Yogyakarta</td>
+                                             <td>
+                                                <a href="detail-tuk.html"><button class="btn btn-info btn-icon" ><i class="fa fa-info-circle"></i></button></a>
+                                                <a href="edit-tuk.html"><button class="btn btn-primary btn-icon"><i class="fas fa-edit"></i></button></a>
+                                                <button class="btn btn-danger btn-icon"><i class="fas fa-times"></i></button>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <th scope="row">1</th>
+                                             <td>070-TUKS-LSPABI</td>
+                                             <td>Sewaktu</td>
+                                             <td>Fresh Konsultan</td>
+                                             <td>Jalan Parangtritis, Prancak Dukuh, Sewon, Pri Bantul, Daerah Istimewa Yogyakarta</td>
+                                             <td>
+                                                <a href="detail-tuk.html"><button class="btn btn-info btn-icon" ><i class="fa fa-info-circle"></i></button></a>
+                                                <a href="edit-tuk.html"><button class="btn btn-primary btn-icon"><i class="fas fa-edit"></i></button></a>
+                                                <button class="btn btn-danger btn-icon"><i class="fas fa-times"></i></button>
+                                             </td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </div>
+            <footer class="main-footer">
+               <div class="footer-left">
+                  Copyright &copy; 2020 <div class="bullet"></div>
+               </div>
+               <div class="footer-right">
+                  2.3.0
+               </div>
+            </footer>
+         </div>
+      </div>
+
+      <!-- General JS Scripts -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script src="../assets/js/stisla.js"></script>
+
+      <!-- JS Libraies -->
+      <script src="../node_modules/cleave.js/dist/cleave.min.js"></script>
+      <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
+
+      
+      <script src="../node_modules/datatables/media/js/jquery.dataTables.min.js"></script>
+      <script src="../node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+      <script src="../node_modules/datatables.net-select-bs4/js/select.bootstrap4.min.js"></script>
+      <!-- Template JS File -->
+      <script src="../assets/js/scripts.js"></script>
+      <script src="../assets/js/custom.js"></script>
+
+      <!-- Page Specific JS File -->
+      <script src="../assets/js/page/modules-datatables.js"></script>
+
+      <script src="../assets/js/page/forms-advanced-forms.js"></script>
+   </body>
+</html>
